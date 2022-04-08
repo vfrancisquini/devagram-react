@@ -18,7 +18,7 @@ export default function Login(){
                 <Image
                     src={imagemLogo}
                     alt="logotipo"
-                    layout = "fill"
+                    layout="fill"
                 />
 
             </div>
@@ -30,7 +30,8 @@ export default function Login(){
                         imagem={imagemEnvelope}
                         texto="E-Mail"
                         tipo = "email"
-                        aoAlterarValor ={e => seEmail(e.target.value)}
+                        aoAlterarValor ={e => setEmail(e.target.value)}
+                        valor={email}
                         />
 
                     <InputPublico
@@ -38,6 +39,7 @@ export default function Login(){
                         texto="Senha"
                         tipo = "password"
                         aoAlterarValor ={e => setSenha(e.target.value)}
+                        valor={senha}
 
                     />
                     <Botao
