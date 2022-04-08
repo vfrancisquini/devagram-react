@@ -1,4 +1,4 @@
-import Login from "../componentes/login/login";
+import Login from "../componentes/login/index.js";
 
 export default function Index() {
 
