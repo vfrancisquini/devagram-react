@@ -1,24 +1,45 @@
 @import 'variaveis.scss';
 
-
 * {
   font-family: $fontRegular;
   font-size: 14px;
 }
 
-
+html, body, #__next {
+  width: 100%;
+  margin: 0;
+  height: 100%;
+}
 
 .avatar{
   border-radius:50%;
   object-fit: cover;
 }
-
 .oculto {
   display: none;
 }
 
+input {
+  &::placeholder{
+    /* chrome, opera, safari e firefox */
+    color: $cinza2;
+    opacity: 1;
+  }
 
+  &:-ms-input-placeholder{
+    /* ie 10-11 */
+    color: $cinza2;
+  }
+
+  &::-ms-input-placeholder{
+    /* edge */
+    color: $cinza2;
+  }
+
+}
 
 @import '../public/fonts/fonts.scss';
 @import '../componentes/botao/botao.scss';
+@import './paginaPublica.scss';
+@import '../componentes/inputPublico/inputPublico.scss';
 
