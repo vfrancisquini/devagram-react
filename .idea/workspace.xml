@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbd649c6-b58f-4660-8694-2b7575580667" name="Changes" comment="Login OK!&#10;Pagina de cadastro inciada!">
-      <change afterPath="$PROJECT_DIR$/pages/cadastro/cadastro.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/HttpService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/UsuarioService.js" afterDir="false" />
+    <list default="true" id="fbd649c6-b58f-4660-8694-2b7575580667" name="Changes" comment="Cadastro e Login OK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/inputPublico/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/inputPublico/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/uploadImagem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/uploadImagem/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cadastro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cadastro/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/variaveis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/variaveis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/validadores.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validadores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/HttpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/HttpService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/UsuarioService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UsuarioService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +48,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="ts.external.directory.path" value="C:\Users\Victor\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\213.7172.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/componentes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -72,7 +65,7 @@
       <workItem from="1649433085133" duration="4789000" />
       <workItem from="1649691918746" duration="11418000" />
       <workItem from="1649797593247" duration="4514000" />
-      <workItem from="1649881401702" duration="10363000" />
+      <workItem from="1649881401702" duration="16320000" />
     </task>
     <task id="LOCAL-00001" summary="Upload Inicial do Devagram">
       <created>1649350655427</created>
@@ -137,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649725302629</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cadastro e Login OK">
+      <created>1649971744172</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649971744172</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +190,7 @@
     <MESSAGE value="criação de login" />
     <MESSAGE value="Configuração input login" />
     <MESSAGE value="Login OK!&#10;Pagina de cadastro inciada!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login OK!&#10;Pagina de cadastro inciada!" />
+    <MESSAGE value="Cadastro e Login OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cadastro e Login OK" />
   </component>
 </project>
