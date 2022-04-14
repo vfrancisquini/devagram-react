@@ -29,8 +29,9 @@ export default function InputPublico({
                 />
 
 
-                {exibirMensagemValidacao && <p className="mensagemValidação"> {mensagemValidacao} </p>}
+
             </div>
+            {exibirMensagemValidacao && <p className="mensagemValidacao"> {mensagemValidacao} </p>}
 
 
         </div>

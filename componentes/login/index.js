@@ -6,10 +6,49 @@ import imagemChave from "../../public/imagens/chave.svg"
 import imagemLogo from "../../public/imagens/logo.svg"
 import Botao from "../botao";
 import {useState} from "react";
+import {validarEmail, validarSenha} from "../../utils/validadores";
+import UsuarioService from "../../services/UsuarioService";
+
+const usuarioService = new UsuarioService();
+
 
 export default function Login(){
     const[email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const [estaSubmetendo, setEstaSubmetendo] = useState("");
+
+    const validarFormulario = () => {
+        return (
+            validarEmail(email)
+            && validarSenha (senha)
+
+        );
+    }
+
+    const aoSubmeter = async (e) =>{
+        e.preventDefault();
+        if (!validarFormulario()){
+            return;
+        }
+
+        setEstaSubmetendo(true);
+
+        try {
+            await usuarioService.login({
+                login: email,
+                senha
+            });
+
+            //TODO: redirecionar o usuario para home
+
+        }catch (error){
+            alert(
+                "erro ao realizar o login. " + error?.response?.data?.erro
+            );
+        }
+
+        setEstaSubmetendo(false);
+    }
 
 
     return(
@@ -25,14 +64,15 @@ export default function Login(){
             </div>
 
             <div className="conteudoPaginaPublica">
-                <form>
-
+                <form onSubmit={aoSubmeter}>
                     <InputPublico
                         imagem={imagemEnvelope}
                         texto="E-Mail"
                         tipo = "email"
                         aoAlterarValor ={e => setEmail(e.target.value)}
                         valor={email}
+                        mensagemValidacao="O endereço informado é inválido"
+                        exibirMensagemValidacao={email && !validarEmail(email)}
                         />
 
                     <InputPublico
@@ -41,23 +81,19 @@ export default function Login(){
                         tipo = "password"
                         aoAlterarValor ={e => setSenha(e.target.value)}
                         valor={senha}
-
+                        mensagemValidacao="A senha precisa ter 3 caracteres"
+                        exibirMensagemValidacao={senha && !validarSenha(senha)}
                     />
                     <Botao
                         texto="Login"
-                        type="submit"
-                        desabilitado={false}
-
+                        tipo="submit"
+                        desabilitado={!validarFormulario() || estaSubmetendo}
                     />
                 </form>
 
                 <div className="rodapePaginaPublica">
                     <p>Não possui uma conta?</p>
                         <Link href="/cadastro">Faça seu cadastro agora!</Link>
-
-
-
-
                 </div>
 
             </div>
