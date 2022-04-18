@@ -1,4 +1,3 @@
-
 import {useEffect, useRef} from "react";
 
 export default function UploadImagem({
@@ -20,10 +19,9 @@ export default function UploadImagem({
 
     const abrirSeletorArquivos = () =>{
         referenciaInput?.current?.click();
-        console.log('clicou');
     }
 
-    const alterarImagem = () =>{
+    const AoAlterarImagem = () =>{
 
         if(!referenciaInput?.current?.files?.length){
             return;
@@ -59,7 +57,7 @@ export default function UploadImagem({
                className='oculto'
                accept="image/*"
                ref={referenciaInput}
-               onChange ={alterarImagem}
+               onChange ={AoAlterarImagem}
            />
 
        </div>
