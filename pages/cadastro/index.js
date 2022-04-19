@@ -16,6 +16,7 @@ import Botao from "../../componentes/botao";
 import {useState} from "react";
 import UploadImagem from "../../componentes/uploadImagem";
 import UsuarioService from "../../services/UsuarioService";
+import {useRouter} from "next/router";
 
 
 const usuarioService = new UsuarioService();
@@ -28,7 +29,8 @@ export default function Cadastro (){
     const [senha, setSenha] = useState("");
     const [confSenha, setconfSenha] = useState("");
     const [imagem, setImagem] = useState("");
-    const [estaSubmetendo, setEstaSubmetendo] = useState("");
+    const [estaSubmetendo, setEstaSubmetendo] = useState(false);
+    const router = useRouter();
 
     const validarFormulario = () =>{
         return (
@@ -57,7 +59,12 @@ export default function Cadastro (){
             }
 
             await usuarioService.cadastro(corpoReqCadastro);
-            alert ("sucesso");
+            await usuarioService.login({
+                login: email,
+                senha
+        });
+
+            router.push('/');
 
         } catch (error){
             alert(

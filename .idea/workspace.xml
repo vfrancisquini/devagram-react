@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbd649c6-b58f-4660-8694-2b7575580667" name="Changes" comment="Cadastro e Login OK">
-      <change afterPath="$PROJECT_DIR$/componentes/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="fbd649c6-b58f-4660-8694-2b7575580667" name="Changes" comment="Cadastro e Login funcionando">
+      <change afterPath="$PROJECT_DIR$/hoc/comAutorizacao.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/avatar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/avatar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componentes/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componentes/inputPublico/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/inputPublico/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componentes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/login/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/componentes/uploadImagem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/uploadImagem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cadastro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cadastro/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/HttpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/HttpService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/UsuarioService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UsuarioService.js" afterDir="false" />
@@ -71,7 +73,7 @@
       <workItem from="1649691918746" duration="11418000" />
       <workItem from="1649797593247" duration="4514000" />
       <workItem from="1649881401702" duration="17939000" />
-      <workItem from="1650300286241" duration="6014000" />
+      <workItem from="1650300286241" duration="13571000" />
     </task>
     <task id="LOCAL-00001" summary="Upload Inicial do Devagram">
       <created>1649350655427</created>
@@ -150,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649980110195</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cadastro e Login funcionando">
+      <created>1650315567758</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650315567758</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +213,7 @@
     <MESSAGE value="Configuração input login" />
     <MESSAGE value="Login OK!&#10;Pagina de cadastro inciada!" />
     <MESSAGE value="Cadastro e Login OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cadastro e Login OK" />
+    <MESSAGE value="Cadastro e Login funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cadastro e Login funcionando" />
   </component>
 </project>

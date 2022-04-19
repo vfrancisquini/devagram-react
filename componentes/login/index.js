@@ -1,33 +1,32 @@
-import InputPublico from "../inputPublico";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import imagemEnvelope from "../../public/imagens/envelope.svg"
-import imagemChave from "../../public/imagens/chave.svg"
-import imagemLogo from "../../public/imagens/logo.svg"
+import InputPublico from "../inputPublico";
 import Botao from "../botao";
-import {useState} from "react";
-import {validarEmail, validarSenha} from "../../utils/validadores";
+import { validarEmail, validarSenha } from "../../utils/validadores";
 import UsuarioService from "../../services/UsuarioService";
+
+import imagemEnvelope from "../../public/imagens/envelope.svg";
+import imagemChave from "../../public/imagens/chave.svg";
+import imagemLogo from "../../public/imagens/logo.svg";
 
 const usuarioService = new UsuarioService();
 
-
-export default function Login(){
-    const[email, setEmail] = useState("");
+export default function Login({ aposAutenticacao }) {
+    const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
-    const [estaSubmetendo, setEstaSubmetendo] = useState("");
+    const [estaSubmetendo, setEstaSubmetendo] = useState(false);
 
     const validarFormulario = () => {
         return (
             validarEmail(email)
-            && validarSenha (senha)
-
+            && validarSenha(senha)
         );
     }
 
-    const aoSubmeter = async (e) =>{
+    const aoSubmeter = async (e) => {
         e.preventDefault();
-        if (!validarFormulario()){
+        if (!validarFormulario()) {
             return;
         }
 
@@ -39,19 +38,19 @@ export default function Login(){
                 senha
             });
 
-            //TODO: redirecionar o usuario para home
-
-        }catch (error){
+            if (aposAutenticacao) {
+                aposAutenticacao();
+            }
+        } catch (error) {
             alert(
-                "erro ao realizar o login. " + error?.response?.data?.erro
+                "Erro ao realizar o login. " + error?.response?.data?.erro
             );
         }
 
         setEstaSubmetendo(false);
     }
 
-
-    return(
+    return (
         <section className={`paginaLogin paginaPublica`}>
             <div className="logoContainer">
                 <Image
@@ -60,30 +59,30 @@ export default function Login(){
                     layout="fill"
                     className="logo"
                 />
-
             </div>
 
             <div className="conteudoPaginaPublica">
                 <form onSubmit={aoSubmeter}>
                     <InputPublico
                         imagem={imagemEnvelope}
-                        texto="E-Mail"
-                        tipo = "email"
-                        aoAlterarValor ={e => setEmail(e.target.value)}
+                        texto="E-mail"
+                        tipo="email"
+                        aoAlterarValor={e => setEmail(e.target.value)}
                         valor={email}
                         mensagemValidacao="O endereço informado é inválido"
                         exibirMensagemValidacao={email && !validarEmail(email)}
-                        />
+                    />
 
                     <InputPublico
                         imagem={imagemChave}
                         texto="Senha"
-                        tipo = "password"
-                        aoAlterarValor ={e => setSenha(e.target.value)}
+                        tipo="password"
+                        aoAlterarValor={e => setSenha(e.target.value)}
                         valor={senha}
-                        mensagemValidacao="A senha precisa ter 3 caracteres"
+                        mensagemValidacao="Precisa ter pelo menos 3 caracteres"
                         exibirMensagemValidacao={senha && !validarSenha(senha)}
                     />
+
                     <Botao
                         texto="Login"
                         tipo="submit"
@@ -93,9 +92,8 @@ export default function Login(){
 
                 <div className="rodapePaginaPublica">
                     <p>Não possui uma conta?</p>
-                        <Link href="/cadastro">Faça seu cadastro agora!</Link>
+                    <Link href="/cadastro">Faça seu cadastro agora!</Link>
                 </div>
-
             </div>
 
         </section>

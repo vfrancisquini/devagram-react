@@ -33,7 +33,7 @@ export default function UploadImagem({
             setImagem({
                 preview: fileReader.result,
                 arquivo
-            })
+            });
         }
     }
     return(

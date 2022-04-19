@@ -18,5 +18,5 @@ export default function Index() {
   if (estaAutenticado){
     return <Home />;
   }
-  return <Login />;
+  return <Login aposAutenticacao={() => setEstaAutenticado(true)} />;
 }
