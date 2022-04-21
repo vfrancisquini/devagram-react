@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbd649c6-b58f-4660-8694-2b7575580667" name="Changes" comment="Cadastro e Login funcionando">
-      <change afterPath="$PROJECT_DIR$/hoc/comAutorizacao.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/inputPublico/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/inputPublico/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/uploadImagem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/uploadImagem/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cadastro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cadastro/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/HttpService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/HttpService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/UsuarioService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UsuarioService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,8 @@
       <workItem from="1649691918746" duration="11418000" />
       <workItem from="1649797593247" duration="4514000" />
       <workItem from="1649881401702" duration="17939000" />
-      <workItem from="1650300286241" duration="13571000" />
+      <workItem from="1650300286241" duration="14184000" />
+      <workItem from="1650407502902" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="Upload Inicial do Devagram">
       <created>1649350655427</created>
@@ -159,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650315567758</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cadastro e Login funcionando">
+      <created>1650326963785</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650326963785</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
